@@ -1,4 +1,3 @@
-
 ; Script to get all URLs from Firefox(or IE if Firefox is not open)
 ; Assumed that urls are unique
 Local $file = FileOpen("test.txt", 2)
@@ -7,8 +6,6 @@ If WinExists("[CLASS:MozillaUIWindowClass]") Then
     WinActivate("[CLASS:MozillaUIWindowClass]")
 ElseIf WinExists("[CLASS:IEFrame]") Then
     WinActivate("[CLASS:IEFrame]")
-ElseIf WinExists("[CLASS:Chrome_WidgetWin_1]") Then
-    WinActivate("[CLASS:Chrome_WidgetWin_1]")
 EndIf
 Dim $links 
 Sleep(100)
